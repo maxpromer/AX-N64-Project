@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ?Vision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Sonthaya Max, None, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.26.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Max\Documents\AX-NC64_DotMatrix\MDK-ARM\AX-NC64_DotMatrix.uvprojx
+Project File Date:  07/27/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'AX-NC64_DotMatrix'
+compiling main.c...
+../Src/main.c(344): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(C_LD_GPIO_Port, C_LD_Pin, 0); // Set CS to LOW
+../Src/main.c(346): warning:  #188-D: enumerated type mixed with another type
+      HAL_GPIO_WritePin(C_DT_GPIO_Port, C_DT_Pin, (data>>ibit)&0x01);
+../Src/main.c(348): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(C_CLK_GPIO_Port, C_CLK_Pin, 1);
+../Src/main.c(349): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(C_CLK_GPIO_Port, C_CLK_Pin, 0);
+../Src/main.c(351): warning:  #188-D: enumerated type mixed with another type
+    HAL_GPIO_WritePin(C_LD_GPIO_Port, C_LD_Pin, 1); // Set CS to HIGH
+../Src/main.c(355): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(R_RST_GPIO_Port, R_RST_Pin, 1);
+../Src/main.c(356): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(R_RST_GPIO_Port, R_RST_Pin, 0);
+../Src/main.c(360): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(R_CLK_GPIO_Port, R_CLK_Pin, 1);
+../Src/main.c(361): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(R_CLK_GPIO_Port, R_CLK_Pin, 0);
+../Src/main.c(461): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(C_LD_GPIO_Port, C_LD_Pin, 1); // Set CS to HIGH
+../Src/main.c(462): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(C_DT_GPIO_Port, C_DT_Pin, 0);
+../Src/main.c(463): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(C_CLK_GPIO_Port, C_CLK_Pin, 0);
+../Src/main.c(466): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(R_RST_GPIO_Port, R_RST_Pin, 0);
+../Src/main.c(467): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(R_CLK_GPIO_Port, R_CLK_Pin, 0);
+../Src/main.c: 14 warnings, 0 errors
+linking...
+Program Size: Code=4420 RO-data=252 RW-data=1556 ZI-data=1284  
+FromELF: creating hex file...
+"AX-NC64_DotMatrix\AX-NC64_DotMatrix.axf" - 0 Error(s), 14 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L0xx_DFP.2.0.1.pack
+                Keil.STM32L0xx_DFP.2.0.1
+                STMicroelectronics STM32L0 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_AX-NC64_DotMatrix
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

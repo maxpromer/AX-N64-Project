@@ -1,0 +1,25 @@
+--cpu Cortex-M0+
+"ax-nc64_encoder\startup_stm32l053xx.o"
+"ax-nc64_encoder\main.o"
+"ax-nc64_encoder\stm32l0xx_it.o"
+"ax-nc64_encoder\stm32l0xx_hal_msp.o"
+"ax-nc64_encoder\stm32l0xx_hal_tim.o"
+"ax-nc64_encoder\stm32l0xx_hal_tim_ex.o"
+"ax-nc64_encoder\stm32l0xx_hal.o"
+"ax-nc64_encoder\stm32l0xx_hal_i2c.o"
+"ax-nc64_encoder\stm32l0xx_hal_i2c_ex.o"
+"ax-nc64_encoder\stm32l0xx_hal_rcc.o"
+"ax-nc64_encoder\stm32l0xx_hal_rcc_ex.o"
+"ax-nc64_encoder\stm32l0xx_hal_flash_ramfunc.o"
+"ax-nc64_encoder\stm32l0xx_hal_flash.o"
+"ax-nc64_encoder\stm32l0xx_hal_flash_ex.o"
+"ax-nc64_encoder\stm32l0xx_hal_gpio.o"
+"ax-nc64_encoder\stm32l0xx_hal_dma.o"
+"ax-nc64_encoder\stm32l0xx_hal_pwr.o"
+"ax-nc64_encoder\stm32l0xx_hal_pwr_ex.o"
+"ax-nc64_encoder\stm32l0xx_hal_cortex.o"
+"ax-nc64_encoder\system_stm32l0xx.o"
+--library_type=microlib --strict --scatter "AX-NC64_Encoder\AX-NC64_Encoder.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "AX-NC64_Encoder.map" -o AX-NC64_Encoder\AX-NC64_Encoder.axf
