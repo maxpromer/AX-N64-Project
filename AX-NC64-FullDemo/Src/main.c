@@ -463,7 +463,6 @@ uint8_t font_6_8[] = {
 };
 
 void shiftOut(uint8_t data) {
-	HAL_GPIO_WritePin(DOTMATRIX_C_LD_GPIO_Port, DOTMATRIX_C_LD_Pin, 0); // Set CS to LOW
   for (int ibit=7;ibit>=0;ibit--) {
     HAL_GPIO_WritePin(DOTMATRIX_C_DT_GPIO_Port, DOTMATRIX_C_DT_Pin, (data>>ibit)&0x01);
     
@@ -471,6 +470,7 @@ void shiftOut(uint8_t data) {
 		HAL_GPIO_WritePin(DOTMATRIX_C_CLK_GPIO_Port, DOTMATRIX_C_CLK_Pin, 0);
   }
   HAL_GPIO_WritePin(DOTMATRIX_C_LD_GPIO_Port, DOTMATRIX_C_LD_Pin, 1); // Set CS to HIGH
+  HAL_GPIO_WritePin(DOTMATRIX_C_LD_GPIO_Port, DOTMATRIX_C_LD_Pin, 0); // Set CS to LOW
 }
 
 void resetCounter() {
@@ -497,8 +497,9 @@ void scan_dotmatrix2(uint8_t *data) {
   if (scan_bit == 0) {
     resetCounter();
   }
-  shiftOut(~data[scan_bit]);
   tickClock();
+  shiftOut(~data[scan_bit]);
+  shiftOut(0xFF);
   scan_bit = scan_bit < 8 ? scan_bit + 1 : 0;
 }
 
@@ -908,7 +909,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 32;
+  htim2.Init.Prescaler = 1;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
